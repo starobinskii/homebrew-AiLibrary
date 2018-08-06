@@ -7,8 +7,9 @@ class Ailibrary < Formula
   head "https://github.com/starobinskii/AiLibrary.git", :branch => "master"
 
   def install
-    system "make"
-    system "install"
+    include.install ""
+    ohai "to use the library, please set your include path accordingly:"
+    ohai "CPPFLAGS: -I#{include}"
   end
 
   test do
