@@ -1,0 +1,39 @@
+language: cpp
+
+sudo: false
+
+matrix:
+  include:
+    - os: osx
+      osx_image: beta-xcode6.1
+
+    - os: osx
+      osx_image: beta-xcode6.2
+
+    - os: osx
+      osx_image: beta-xcode6.3
+
+    - os: osx
+      osx_image: xcode6.4
+
+    - os: osx
+      osx_image: xcode7.1
+     
+    - os: osx
+      osx_image: xcode7.2
+
+    - os: osx
+      osx_image: xcode7.3
+
+    - os: osx
+      osx_image: xcode8
+
+before_install:
+  - brew update
+  - brew tap starobinskii/AiLibrary
+
+script:
+  - uname -a ; sw_vers ; $CXX --version
+  - brew audit AiLibrary
+  - brew install AiLibrary
+  - brew test AiLibrary
