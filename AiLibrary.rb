@@ -8,6 +8,7 @@ class Ailibrary < Formula
 
   def install
     system "make"
+    system "install"
   end
 
   test do
