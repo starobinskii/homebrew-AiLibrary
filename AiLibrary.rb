@@ -1,4 +1,4 @@
-class AiLibrary < Formula
+class Ailibrary < Formula
   desc "C++ Library from Ailurus Studio"
   homepage "https://github.com/starobinskii/AiLibrary"
   url "https://github.com/starobinskii/AiLibrary/archive/v1.1.0.tar.gz"
